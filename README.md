@@ -1,4 +1,3 @@
-```markdown
 # Credit Scoring MLOps System
 
 This project is a microservice-based system designed for evaluating client creditworthiness (credit scoring). The system includes an automated backend with an ML model and an interactive web interface for end-users.
