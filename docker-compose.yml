@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend: 
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: german_credit_scoring_backend
+    ports:
+      - "666:666"
+    volumes:
+      - ./mlruns:/app/mlruns
+      - ./mlflow.db:/app/mlflow.db
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 1G
+        reservations:
+          memory: 256M
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: german_credit_scoring_frontend
+    environment:
+      - API_URL=http://backend:666/predict
+    ports:
+      - '777:777'
+    depends_on:
+      - backend
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 512M
