@@ -9,7 +9,8 @@ app = FastAPI()
 # MODEL_VERSION = '1'
 # model_uri = f'models:/{MODEL_NAME}/{MODEL_VERSION}'
 # m-ec511d7c0ea846459cabdb0f227b77a6
-model_uri = "/app/mlruns/1/models/m-ec511d7c0ea846459cabdb0f227b77a6/artifacts"
+# model_uri = "/app/mlruns/1/models/m-ec511d7c0ea846459cabdb0f227b77a6/artifacts"
+model_uri = "mlruns/1/models/m-ec511d7c0ea846459cabdb0f227b77a6/artifacts"
 
 model = mlflow.pyfunc.load_model(model_uri)
 
