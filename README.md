@@ -64,3 +64,6 @@ The model is trained on the German Credit dataset. Below are examples of valid i
 * `Dockerfile` / `Dockerfile.frontend` — Docker build instructions.
 * `docker-compose.yml` — Orchestration and network configuration.
 * `mlruns/` — MLflow artifact and metadata storage.
+
+## How it looks
+<img width="751" height="1246" alt="image" src="https://github.com/user-attachments/assets/bfba2435-594e-415b-a31f-809c2367a744" />
